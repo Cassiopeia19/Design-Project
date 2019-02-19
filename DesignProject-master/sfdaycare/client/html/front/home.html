@@ -1,0 +1,133 @@
+<!-- <template name="homePage">
+    <div class="container ">
+        <div class="row center-block ">
+            <div class="jumbotron col-xs-12">
+                <h1>Spangler Family Daycare</h1>
+                <h3>
+                    <p><strong>Mission:</strong>
+                        First and foremost to provide a safe nurturing environment for children.<br>
+                        To engage children in developmentally appropriate activities in order
+                        to facilitate educational and emotional growth with a focus on kindergarten readiness.
+                    </p> 
+                </h3> 
+            </div>
+                    
+            <div class="container">
+                <div class="row center-block">
+                    <div class="col-xs-5 center-block about"> 
+                        <h3><i>Delivering care that fosters children's unique talents and strengths!</i></h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    <div class="col-xs-7">
+                        <div class="content words">
+                            <img class="mySlides" src="images/two_kids.jpg" style="width:500px; height:600px;">
+                            <img class="mySlides" src="images/white_board.jpg" style="width: 500px; height:600px;">
+                            <img class="mySlides" src="images/tent.jpg" style="width: 500px; height:600px;">
+                            <img class="mySlides" src="images/tree.jpg" style="width: 500px; height:600px;">
+                            
+                            <button class="button black left-button" onclick="plusDivs(-1)" style="font-size:2em; ">&#10094;</button>
+                            <button class="button black right-button" onclick="plusDivs(1)" style="font-size:2em; ">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div class="row center-block legal">
+            <div class="col-xs-12"><h3>legal section here</h3></div>
+        </div>       
+    </div>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);      
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+        //function to decide what image to show
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            x[slideIndex-1].style.display = "block";  
+        }
+    </script>      
+</template> -->
+
+<template name="homePage">
+                   
+    <!--link for BOOTSTRAP CONTENT-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!--link for CSS CONTENT-->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+   
+        <main class= "container home-background">
+            <div class= "row center-block">
+                <div style= "background-color:#E9C77B!important" class="jumbotron">
+                    <div class="row">
+                        <div class="col-xs-8 banner">
+                            </div>
+                            <div class="col-md-4">
+                                    <h3><strong>Mission</strong>: First and foremost to provide a safe, nuturing environment for children.<br>
+                                        To engage children in developmentally-appropriate activities in order to facilitate
+                                        educational and emotional growth with a focus on kindergarten readiness.
+                                    </h3>
+                                </div>
+                            </div>                        
+                </div>
+            </div>
+            <section class="d-flex justify-content-center align-items-center">
+                <!--container for picture rotation-->
+                <div class="container">
+                <div class="col-xs-6 center-block about">
+                    <h2><i>Delivering care that fosters children's unique talents and strengths.</i></h2>
+                </div>
+        </div>
+               <div class="col-xs-6" style="float:left">
+                    <div class="content words">
+                        <img class="mySlides" src="images/two_kids.jpg" style="width:500px; height:600px;;border-radius: 20%; border-color: whitesmoke; padding: 5%">
+                        <img class="mySlides" src="images/white_board.jpg" style="width: 500px; height:600px;;border-radius: 20%; border-color: whitesmoke; padding: 5%">
+                        <img class="mySlides" src="images/tent.jpg" style="width: 500px; height:600px;;border-radius: 20%; border-color: whitesmoke; padding: 5%">
+                        <img class="mySlides" src="images/tree.jpg" style="width:500px; height:600px;;border-radius: 20%; border-color: whitesmoke; padding: 5%"> 
+                  
+                   <!--font size below made the arrows bigger -->
+                    <button class="button black left-button" onclick="plusDivs(-1)" style="font-size:2em; ">&#10094;</button>
+                        <button class="button black right-button" onclick="plusDivs(1)" style="font-size:2em; ">&#10095;</button>
+                    </div>
+                </div>
+         <script>
+          var slideIndex = 1;
+          showDivs(slideIndex);
+          
+          function plusDivs(n) {
+            showDivs(slideIndex += n);
+          } 
+     /*    function to decide what image to show */
+          function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none";  
+            }
+            x[slideIndex-1].style.display = "block";  
+          }
+         </script> 
+         </section>
+         </main>
+     <footer class="row center-block legal">
+         <div class="col-xs-12"><h3>&copy;2018 Spangler Family Daycare</h3></div>
+     </footer>
+</template>

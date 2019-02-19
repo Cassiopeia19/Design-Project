@@ -1,0 +1,58 @@
+
+<template name="dailyActivityReport">
+        <div class="row center-block">
+            <br><br><br>
+            <div class="col-xs-1">
+                    <a href="/child-list"><button class="btn btn-primary">Back</button></a>
+            </div>
+            <div class="col-xs-10"></div>
+            <div class="col-xs-1">
+                <a href="/daily-activity-report-help" target="_blank"><button class="btn btn-primary" >Help</button></a>
+            </div>
+
+        </div>
+        <div class="row center-block">
+            <div class="col-xs-12">
+                <br>
+                <form>
+                <h3>Daily Activity Report</h3>
+                <br><br>
+                {{#each displayChildName}}
+                <h5><strong>Child:</strong> {{childFirstName}} {{childLastName}}</h5>
+                <h5><strong>Guardian:</strong> {{guardianFirstName}} {{guardianLastName}}</h5>
+                  
+                <h5><strong>Email Address:</strong> <input type="text" value="{{emailAddress}}" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email">                <a href="#">
+                    <span class="glyphicon glyphicon-info-sign" title="Correct Format: ____@___.____"></span> 
+                </a></h5>
+
+                <script type="text/javascript">
+                    var dateObject = new Date();
+                    var month = dateObject.getMonth() + 1;
+                    var day = dateObject.getDate();
+                    var year = dateObject.getFullYear();
+                    var date = month + " / " + day + " / " + year;
+                    var emailSubject = "{{childFirstName}} {{childLastName}} | Daily Activity Report: " + date;
+                    var subject = document.getElementById("subject");
+                    subject.value = emailSubject;
+                </script>                
+ 
+                {{/each}}
+                    <label for="sub"><h5><strong>Subject:  </strong></h5></label><input type="text" id="subject" name="sub"  style="width:300px" required>
+                    <a href="#">
+                            <span class="glyphicon glyphicon-info-sign" title="Subject cannot be empty"></span> 
+                        </a> <br><br>
+
+                    <textarea  type="text" rows="10" cols="50" name="reportContent" placeholder="Enter Message..." required></textarea> 
+                        <a href="#">
+                            <span class="glyphicon glyphicon-info-sign" title="Email body cannot be empty"></span> 
+                        </a><br><br>
+                    <input type="submit" class="btn btn-success" value="Send Email"><br><br>
+                </form>  
+ 
+                <br><br>
+            </div>
+        </div>
+
+
+
+    </template>

@@ -1,0 +1,37 @@
+<template name="editCurriculum">
+    <br><br>
+    <div class="row">
+        <div class="col-xs-1 center-block">
+            <a href="/curriculum-builder" class="btn btn-primary" role="button">Back</a>
+        </div>
+        <div class="col-xs-10"></div>
+        <div class="col-xs-1"></div>
+    </div>
+    <div class="row center-block">
+        <div class="col-xs-12">
+            <br><br><br><h1>View/Edit Curriculum</h1><br><br>
+        </div>
+    </div>
+    <div class="row center-block">
+            <div class="col-xs-12">
+                <form class="">
+                    {{#each editSelectedCurriculum}}
+                    <label for="curriculumName">Title: </label> 
+                    <input type="text" name="curriculumName" pattern="[\w\-\s]{3,25}" value="{{curriculumName}}">
+                    <a href="#">
+                            <span class="glyphicon glyphicon-info-sign" title="Alphanumeric characters and spaces only | 3 character minimum, 25 character maximum"></span> 
+                        </a> <br><br>
+                    <label>Date: </label><input type="date" name="dateCurriculumCreated" value="{{curriculumDate}}"><br><br>    
+                    <label for="curriculumContent">Curriculum Notes:</label><br>  
+                    <textarea rows="13" cols="100" name="curriculumContent" value="{{curriculumContent}}"></textarea> 
+                    <br><br>
+                    {{/each}}
+                    <input type="submit" class="btn btn-success " value="Save">       
+                </form>
+                <br><br><br>
+            </div>
+    </div>
+    <div class="row center-block">
+
+    </div>
+</template>

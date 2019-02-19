@@ -1,0 +1,44 @@
+<template name="child-manager">
+   <br><br>
+   <div class="row center-block">
+        <div class="col-xs-1 ">
+           <a href="/admin-dash" class="btn btn-primary" role="button">Back</a>
+        </div>
+       <div class="col-xs-10">
+           
+       </div>
+       <div class="col-xs-1">
+        <a href="/add-child-help" target="_blank"><button class="btn btn-sm btn-primary" >help</button></a>           
+       </div>
+   </div>
+
+            <center><h1>Child Manager</h1></center>
+
+
+   <div class="container">
+
+    <div class = "row center-block ">
+            <div class="col-xs-12">
+            
+            </div>
+        <br><br><br>
+    </div>
+
+    <!--Row for tabs-->
+       <div class="row center-block" style="height:500px">
+           <div class="col-xs-12">
+
+                <ul class="nav nav-tabs nav-justified">
+                        <li class="active"><a data-toggle="tab" href="#childProfile" >Add Child</a></li>
+                </ul>
+                <!--child profile's content-->
+                <div class="tab-content">
+                        <div id="addChild" class="tab-pane fade in active">
+                            {{> childProf}}
+                        </div>
+                </div><!--End tab content div-->
+           </div>
+    </div> <!--END ROW FOR TABS-->
+</div> <!--END CONTAINER-->
+   
+</template>

@@ -1,0 +1,28 @@
+<template name="adminDash">
+
+<div class="container">
+    <div class="row center-block">
+            <div class="jumbotron col-xs-12 ">
+                    <h1>Dashboard</h1>
+            </div>
+    </div>
+
+    <div class="row center-block">
+        <div class="col-xs-12">
+
+            <a href="{{pathFor 'child-manager'}}" class="btn btn-primary" role="button">Add Child</a>
+            <a href="/child-list" class="btn btn-primary" role="button">Child Roster</a> 
+            <br><br>
+
+        </div>
+    </div>
+    <div class="row center-block">
+        <div class="col-xs-12">
+                <a href="{{pathFor 'curriculum-builder'}}" class="btn btn-primary" role="button">Curriculum Builder</a>
+                <a href="{{pathFor 'expense-tracker'}}" class="btn btn-primary" role="button">Expense Tracker</a>  
+                <a href="/wait-list" class="btn btn-primary" role="button">Wait-List</a>     
+        </div>
+    </div>
+</div>
+
+</template>

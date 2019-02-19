@@ -1,0 +1,61 @@
+<template name="childList">
+    <div class="row">
+        <div class="col-xs-2 center-block">
+            <br><br><br><br>
+            <a href="/admin-dash"><button class=" btn btn-primary">Back</button></a>
+        </div>
+        <div class="col-xs-8">
+
+        </div>
+        <div class="col-xs-2">
+        <br><br><br><br>
+        <a href="/child-roster-help" target="_blank"><button class="btn btn-primary">Help</button></a>
+        </div> 
+    </div>
+    <div class="row">
+        <div class="col-xs-12 center-block">
+            <h1>Child Roster</h1>
+        </div>
+    </div>
+    <br><br><br> 
+    <div class="container ">              
+        <div class="row center-block ">
+            <div class="col-xs-6 active-child-color">
+                <!-- List of Active Children -->
+                <h2>Active Children</h2><br>
+                {{#each listActiveChildren}}
+                <label>First Name:</label>  <input type="text" value="{{childFirstName}}" readonly> <br>
+                <label>Last Name: </label> <input type="text" value="{{childLastName}}" readonly><br><br>
+                <label>Enrollment Date: </label> <input type="date" name="enrollDate" value="{{enrollDate}}" readonly> <br><br>
+                <a href="/daily-activity-report"><button class="btn btn-primary dailyActivityReportBtn">Daily Activity Report</button></a>
+                <a href="/edit-child"><button class="btn btn-success editMe">View/Edit</button></a>
+                <button class="btn btn-danger deleteBtn ">delete</button>
+                <a href="/care-tracker"><button class="btn btn-info trackTimeBtn">Time-In/Out</button></a><br>
+                <a href="/payment-manager"><button class="btn btn-warning paymentManagerBtn">Payment Manager</button></a>
+                <br><br>
+                <hr>
+                {{else}}
+                <h5>No Records To Display</h5>
+                {{/each}}
+                <!-- End List of Active Children-->
+            </div>
+            <div class="col-xs-6 inactive-child-color">
+                <!-- List of Inactive Children-->
+                <h2>Inactive Children</h2><br>
+                {{#each listInactiveChildren}}
+                <label>First Name:</label>  <input type="text" value="{{childFirstName}}" readonly> <br>
+                <label>Last Name: </label> <input type="text" value="{{childLastName}}" readonly><br><br>
+                <label>Enrollment Date: </label> <input type="date" name="enrollDate" value="{{enrollDate}}" readonly> <br><br>
+                <a href="/edit-child"><button class="btn btn-success editMe">View/Edit</button></a>
+                <button class="btn btn-danger deleteBtn" >delete</button>
+                <br><br>
+                <hr>
+                {{else}}
+                <h5>No Records To Display</h5>
+                {{/each}}
+                <!-- End list of Inactive Children-->
+            </div>
+        </div>
+        <br><br>
+    </div>
+</template>

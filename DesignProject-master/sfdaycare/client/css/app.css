@@ -1,0 +1,214 @@
+/* 
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+.about{
+    background-color:yellow;
+}
+
+.legal{
+    background-color:cyan;
+}
+
+*/
+
+
+
+/*STYLING FOR PHOTO ROTATION*/
+/*
+.content {
+	max-width: 980px;
+	margin: auto;
+}
+
+.container {
+	position: relative;
+	margin-top:2%;
+	margin-bottom:2%;
+}
+
+container:hover {
+	display: inline-block
+}
+
+.button {
+	border: none;
+	display: inline-block;
+	padding: 8px 16px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	color: yellow;
+	background-color: inherit;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+.button:hover {
+	color: yellow!important;
+	background-color: #ccc!important;
+}
+
+.black:hover {
+	color: yellow!important;
+	background-color: #000!important
+}
+
+.right-button {
+	position: absolute;
+	top: 50%;
+	right: 26%;
+	transform: translate(0%, -50%);
+	-ms-transform: translate(0%, -50%)
+}
+
+.left-button {
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	transform: translate(0%, -50%);
+	-ms-transform: translate(-0%, -50%)
+}
+
+/* STYLING FOR LOGIN FORM */
+
+
+	
+	
+
+/*
+
+input[type=text]:focus{
+	border: 3px solid #555;
+	border-color:  #006eff;
+
+}
+
+input[type=password]:focus{
+	border: 3px solid #555;
+	border-color:  #006eff;
+} */
+
+
+
+
+.home-background {
+  font-family: sans-serif;
+  background-color: #315481;
+  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
+  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+  font-size: 3em;
+} 
+.banner{
+	background-image:url(../images/banner.png); 
+	background-position: 2px, 25%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 15em;
+	height: 8em;
+}
+ .center-block {
+	 display: block;
+	 margin-left: auto;
+	 margin-right: auto;
+	 text-align: center;
+ }
+.about{
+	background-color:#C4D4E0;
+	border-radius: 20%;
+}
+
+.legal{
+    background-color: rgb(253, 156, 100);
+}
+
+/*STYLING FOR PHOTO ROTATION*/
+
+.content {
+	max-width: 980px;
+	margin: auto;
+}
+
+.container {
+	position: relative;
+	margin-top:2%;
+	margin-bottom:2%;
+	margin-left: 70vh auto;
+}
+
+container:hover {
+	display: inline-block
+}
+
+.button {
+	border: none;
+	display: inline-block;
+	padding: 8px 16px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	color: rgb(224, 115, 51)!important;
+	background-color: inherit;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+.button:hover {
+	color: rgb(224, 115, 51)!important;
+	background-color: #000!important;
+}
+
+.black:hover {
+	color: rgb(224, 115, 51)!important;
+	background-color: #000!important
+}
+
+.right-button {
+	position: absolute;
+	top: 50%;
+	right: 10%;
+	transform: translate(0%, -50%);
+	-ms-transform: translate(0%, -50%)
+}
+
+.left-button {
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translate(0%, -50%);
+	-ms-transform: translate(-0%, -50%)
+}
+
+.aboutText {
+	color: white;
+}
+
+
+	
+	
+

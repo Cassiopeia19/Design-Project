@@ -1,0 +1,43 @@
+<template name="careTrackerRecords">
+        <div class="row">
+                <div class="col-xs-2 center-block">
+                    <br><br><br><br>
+                    <a href="/care-tracker"><button class=" btn btn-primary">Back</button></a>
+                </div>
+                <div class="col-xs-10"></div> 
+            </div>
+    <div class="row center-block">
+        <div class="col-xs-12">
+            <br><br><h1>Care Tracking Records</h1><br><br>
+
+            <center>            
+            <table border="1">
+            
+                <th>Child Name</th>
+                <th>Date: </th>
+                <th>Check-In</th>
+                <th>Check-Out</th>
+                <th>Total Hours</th>
+{{#each displayTrackedRecords}}
+            <tr>    
+
+            
+                <td>{{childName}} <br><br></td>
+                <td>{{trackDateIn}}<br><br></td>
+                <td>{{checkIn}}<br><br></td>
+                <td>{{checkOut}}<br><br></td>
+                <td><center>{{totalHoursForDay}}</center></td>
+                <td><button class="btn btn-sm btn-danger  deleteBtn">Delete</button></td>
+
+            </tr>
+
+               
+            
+            {{/each}}
+            </table>
+            
+            
+    </center>
+        </div>
+    </div>
+</template>

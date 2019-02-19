@@ -1,0 +1,119 @@
+<template name="familyManager">
+    
+<br><br>
+<center><h1>Family Manager</h1></center>
+
+<div class="container">
+
+
+
+    </div>
+    <div class="row center-block" style="height:500px">
+        <div class="col-xs-12">
+
+                <ul class="nav nav-tabs nav-justified">
+                        <li class="active"><a data-toggle="tab" href="#currentFamilies" >Current Families</a></li>
+                        <li><a data-toggle="tab" href="#manageAFamily">Manage a Family</a></li>
+                        <li><a data-toggle="tab" href="#addAFamily">Add a Family</a></li>
+                </ul>
+
+            <div class="tab-content">
+            <div id="currentFamilies" class="tab-pane fade in active">    
+                <h3>Current Families</h3>
+
+                <br><br><br><br>
+                <!--ADJUST THE BORDER & CENTER TAG WITH CSS LATER-->
+                <center>
+                <table border= 1px>
+                    <tr>
+                        <th> Family Name <br></th>
+                        <th> Family # </th>
+                        <th># of children in care</th>
+                        <th>Names of children in care</th>
+                        <th>Approved Guardians for pickup</th>
+
+                    </tr>
+
+                    <tr>
+                        <td>*family name here*</td>
+                        <td>*family # here*</td>
+                        <td>*# of children here*</td>
+                        <td>*names of children in care here*</td>
+                        <td>*approved pickup guardians here*</td>
+
+                    </tr>
+
+                    <tr>
+                        <td>*family name here*</td>
+                        <td>*family # here*</td>
+                        <td>*# of children here*</td>
+                        <td>*names of children in care here*</td>
+                        <td>*approved pickup guardians here*</td>
+
+                    </tr>
+
+                    <tr>
+                        <td>*family name here*</td>
+                        <td>*family # here*</td>
+                        <td>*# of children here*</td>
+                        <td>*names of children in care here*</td>
+                        <td>*approved pickup guardians here*</td>
+
+                    </tr>    
+                </table>
+                </center>
+                <br><br>
+                </div><!--end current families pane-->
+
+                <!--manage a family pane-->
+                <div id="manageAFamily" class="tab-pane fade in">
+                    <h3>Edit A Family</h3>
+                    <br><br><br>
+
+                    <form>
+                        <input type="text" placeholder="Search by family name..." style="width:300px; height: 30px">
+                        <button type="button"  class="btn btn-info glyphicon glyphicon-search"> Search</button>
+                    </form>
+
+                </div><!--end manage a family pane-->
+
+                <!--add a family pane-->
+                <div id="addAFamily" class="tab-pane fade in">
+                    <h3>Add a Family</h3>
+                    <br><br>
+
+                    <form>
+                        <label>Family Name:</label> <input type="text"> <br><br>
+                        <label>Family Number:</label> <input type="text"> <br><br>
+                        <label># Of Children In Care:</label> 
+                        <select>
+                            <option selected="selected">1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+
+                        <br><br>
+
+                        <label>Names Of Children In Care:</label><br>
+                        <label>Child 1:</label> <input type="text" placeholder="first name 1..." >   <input type="text" placeholder="last name 1..." > <br><br>
+                        <label>Child 2:</label> <input type="text" placeholder="first name 2...">   <input type="text" placeholder="last name 2..."> <br><br>
+                        <label>Child 3:</label> <input type="text" placeholder="first name 3...">   <input type="text" placeholder="last name 3..."> <br><br>
+
+                        <br>
+
+                        <label>Approved Guardian for pickup 1:</label> <input type="text" placeholder="Guardian First Name">   <input type="text" placeholder="Guardian Last Name"> <br><br>
+                        <label>Approved Guardian for pickup 2:</label> <input type="text" placeholder="Guardian First Name">   <input type="text" placeholder="Guardian Last Name"> <br><br>
+                        <input type="submit" class="btn btn-success" value="Submit"> <br><br>
+                    </form>
+                </div><!--end add a family pane-->
+
+                </div><!--end tab content div-->
+        </div><!--end column-->
+    </div> <!--end row-->
+    <div class="row center-block">
+        <div class="col-xs-12">
+         <a href="{{pathFor 'admin-dash'}}" class="btn btn-primary" role="button">Back</a>
+        </div>
+    </div>
+
+</template>

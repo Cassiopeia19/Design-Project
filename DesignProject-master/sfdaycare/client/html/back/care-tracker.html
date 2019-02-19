@@ -1,0 +1,64 @@
+<template name="careTracker">
+    
+    <link src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.css">
+    
+    <br><br>
+    
+    <div class="row">
+        <div class="col-xs-1 center-block">
+            <br><br>
+            <a href="/child-list"><button class=" btn btn-primary">Back</button></a>
+        </div>
+        <div class="col-xs-10"></div>
+        <div class="col-xs-1">
+            <a href="/care-tracker-help" target="_blank"><button class="btn btn-primary">Help</button></a>
+        </div> 
+    </div>
+
+    <div class="row center-block">
+        <div class="col-xs-12">
+            <h1>Care Tracker</h1><br><br>
+        </div>
+    </div>
+    <div class="row center-block">
+        <div class="col-xs-6">
+                    <form class="submitTimeIn">
+                    <br><br>
+                    <h2>Check-In</h2>
+                    {{#each trackActiveChildren}}
+                    <br><br>
+                    <label>Child Name:</label><input type="text" value="{{childFirstName}} {{childLastName}}" name="childName" readonly> <br><br> 
+                    <label for="curDate">Date: </label><input type="date" name="trackDate" id="theDate1"  required><br><br>        
+                    <label for="timeIn">Time-In: </label><input type="time" name="timeIn" id="timeIn1" value="" required><br><br>
+               
+                    <button type="submit" class="btn-xs btn-primary">Submit</button>
+                    {{/each}}
+                    </form>
+                </div>
+                <div class="col-xs-6">
+                    <form class="submitTimeOut">
+                        <br><br>
+                        <h2>Check-Out</h2>
+                        {{#each trackActiveChildren}}
+                        <br><br>
+                        <label>Child Name:</label><input type="text" value="{{childFirstName}} {{childLastName}}" name="childName" readonly><br><br>
+                            <label for="curDate">Date: </label><input type="date" name="trackDate" required><br><br>            
+                            <label for="timeOut">Time-Out:</label><input type="time" name="timeOut" value="" required><br><br>
+                            <button type="submit" class="btn-xs btn-primary submitTime">Submit</button>
+                         {{/each}}
+                        </form>
+                </div>
+    </div>
+    <div class="row center-block">
+        <div class="col-xs-12">
+            <br><br>
+            <a href="/care-tracker-records"><button class=" btn btn-info viewTimes" >View All Records</button></a>
+        </div>
+    </div>
+
+                    
+
+
+</template>
+
+

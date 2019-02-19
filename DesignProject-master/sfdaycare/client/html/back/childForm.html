@@ -1,0 +1,117 @@
+<template name="childProf">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <form> 
+        <div class="row center-block">
+            <div class="col-xs-4">            
+                <br><br><br><br><br>                
+                <label>*First Name: </label> <input type="text" name="childFName" pattern="[A-Za-z\s]{3,15}" placeholder="first name"> 
+                <a href="#">
+                    <span class="glyphicon glyphicon-info-sign" title="Correct Format: Letters only | 3 character minimum, 15 character maximum"></span> 
+                </a> <br><br>
+                <label>*Last Name: </label> <input type="text" name="childLName" pattern="[A-Za-z]{3,20}" placeholder="last name">
+                <a href="#">
+                    <span class="glyphicon glyphicon-info-sign" title="Correct Format: Letters only | 3 character minimum, 20 character maximum"></span> 
+                </a> <br><br>
+                <label>*Date Of Birth: </label> <input type="date" name="DOB"> 
+                <a href="#">
+                    <span class="glyphicon glyphicon-info-sign" title="Acceptable DOB: 1 month to 5 years of age"></span> 
+                </a><br><br>
+                <label>*Enroll Date: </label> <input type="date" name="enrollDate"> 
+                <a href="#">
+                    <span class="glyphicon glyphicon-info-sign" title="Acceptable date: 1 month before or after current month"></span> 
+                </a><br><br>
+                <label>*Status: </label>
+                <select name="childStatus">
+                    <option>active</option>
+                    <option>inactive</option>
+                </select>
+                <br><br>
+                <label>Dietary Needs: </label><br> <textarea rows="2" columns="20" name="dietNeeds" placeholder="Enter note..."></textarea> <br><br>
+                <label>Special Care Requirements: </label><br> <textarea rows="2" columns="20" name="specialCare" placeholder="Enter note..."></textarea> <br><br>
+
+            </div>
+            <div class="col-xs-5">
+                <br><br>
+                <h3>Child Information</h3> <br><br>    
+ 
+                <label>Allergies: </label><br> <textarea rows="2" columns="20" name="allergies" placeholder="Enter note..."></textarea>  <br><br><br>
+                <label>*Street Address: </label> <input type="text" name="streetAddress" pattern="[\w\-\s]{7,25}" placeholder="ex: 1234 Main St">
+                <a href="#">
+                    <span class="glyphicon glyphicon-info-sign" title="Alphanumeric characters and spaces only | 7 character minimum, 25 character maximum"></span> 
+                </a> <br><br>
+                <label>Address 2: </label> <input type="text" name="address2" pattern="[\w\-\s]{0,25}" placeholder="ex: Apt #, Suite #, etc.">
+                <a href="#">
+                    <span class="glyphicon glyphicon-info-sign" title="Alphanumeric characters and spaces only | 7 character minimum, 25 character maximum"></span> 
+                </a> <br><br>
+                <label>*City: </label> <input type="text" name="city" pattern="[A-Za-z\s]{3,15}">
+                <a href="#">
+                    <span class="glyphicon glyphicon-info-sign" title="Correct Format: Letters only | 3 character minimum, 20 character maximum"></span> 
+                </a> <br><br>
+                <label>*State: </label> 
+                <select name="state">
+                    <option>Missouri</option>
+                    <option>Illinois</option>
+                    <option>Kentucky</option>
+                    <option>Tennessee</option>
+                    <option>Arkansas</option>
+                    <option>Oklahoma</option>
+                    <option>Kansas</option>
+                    <option>Nebraska</option>
+                    <option>Iowa</option>
+                </select>
+                <br><br>
+                <label>*Zip Code: </label> <input type="text" name="zipCode" pattern="[0-9]{5}"> 
+                <a href="#">
+                    <span class="glyphicon glyphicon-info-sign" title="Correct Format: 5 numeric characters only"></span> 
+                </a> <br><br>
+                <br><br>
+            </div>
+            <div class="col-xs-3">
+                <br><br>
+                <h3>Guardian Information</h3> <br><br>      
+                <label>*Guardian First Name:</label> <input type="text" name="guardianFName" pattern="[A-Za-z]{3,15}" placeholder="first name">
+                <a href="#">
+                    <span class="glyphicon glyphicon-info-sign" title="Correct Format: Letters only | 3 character minimum, 20 character maximum"></span> 
+                </a> <br><br>
+                <label>*Guardian Last Name:</label> <input type="text" name="guardianLName" pattern="[A-Za-z]{3,20}" placeholder="last name" >
+                <a href="#">
+                    <span class="glyphicon glyphicon-info-sign" title="Correct Format: Letters only | 3 character minimum, 20 character maximum"></span> 
+                </a> <br><br>
+
+                <label>*Phone: </label> <br>  <input type="tel" pattern="^\d{3}-\d{3}-\d{4}$" name="primaryPhone" placeholder="_ _ _-_ _ _-_ _ _ _">         
+                <a href="#">
+                    <span class="glyphicon glyphicon-info-sign" title="Correct Format: ###-###-####"></span> 
+                </a> <br><br>
+
+                <label>Emergency Phone:</label> <br> <input type="text" pattern="^\d{3}-\d{3}-\d{4}$" name="emergencyPhone" placeholder="_ _ _-_ _ _- _ _ _ _">
+                <a href="#">
+                    <span class="glyphicon glyphicon-info-sign" title="Correct Format: ###-###-####"></span> 
+                </a> <br><br>
+
+                <label>*Email Address: </label> <input type="email" name="emailAddress" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="example@email.com" >
+                <a href="#">
+                    <span class="glyphicon glyphicon-info-sign" title="Correct Format: ____@___.____"></span> 
+                </a> <br><br>
+                <label>Approved Guardian for pick-up: </label> <br><br>
+                <input type="text" name="approvedPUGuardian" pattern="[a-zA-Z\s]{6,30}" placeholder="first and last name">
+                <a href="#">
+                    <span class="glyphicon glyphicon-info-sign" title="Letters And Spaces Only"></span> 
+                </a> 
+                <br><br><br><br>
+            </div>
+        </div>
+        <div class="row center-block">
+            <div class="col-xs-12">
+                <input type="submit" class="btn btn-success" value="Submit">
+            </div>
+        </div>
+        
+    </form>
+
+
+
+</template>
+
+
+  

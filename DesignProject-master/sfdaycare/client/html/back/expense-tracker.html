@@ -1,0 +1,89 @@
+
+
+<template name="expenseTracker">
+    
+        <br>
+        <br>
+        <center><h1>Expense Tracker</h1></center>
+        <br>
+        <br>
+    
+    
+        <div class="container">
+            <div class="row center-block" style="height:500px">
+                <div class="col-xs-12">
+                    <ul class="nav nav-tabs nav-justified">
+                        {{#each receipts}}
+                        {{> displayReceipts}}
+                        {{/each}}
+                        <li class="active"><a data-toggle="tab" href="#addAReceipt">Add An Expense</a></li>
+                        <li><a data-toggle="tab" href="#manageReceipts">Manage Expenses</a></li>
+                        
+                    </ul>
+    
+                    <div class="tab-content">
+                        <div id="addAReceipt" class="tab-pane fade in active">
+                            <form action="">
+                                <br><br>
+                                Receipt Type:
+                                <select name="ReceiptType" required>
+                                    <option>Groceries</option>
+                                    <option>Child needs</option>
+                                    <option>Miscellaneous</option>
+                                </select>
+    
+                                <br><br>
+    
+                                Receipt Total:
+                                <input type="text" name="ReceiptTotal"  pattern="^(?=.?\d)\d{1,3}(\.?\d{0,2})?$"  >
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-info-sign" title="Enter a decimal if change is included. Otherwise, 5 digit limit"></span> 
+                                </a>
+                                <br><br>
+                                Receipt Date:
+                                <input type="date" name="ReceiptDate" required>
+    
+                                <br><br>
+                                Notes:<br>
+                                <textarea rows="5" cols="50" name="ReceiptNotes" placeholder="Enter Notes here"></textarea>
+                                <!-- <input type="text" name="ReceiptNotes" style="width:200px; height:25px"> -->
+    
+    
+                                <br><br>
+                                <input type="submit" class="btn btn-success" value="Save Receipt">
+                                <br><br><br>
+                            </form>
+                        </div><!--end add a receipt content-->
+                        <div id="manageReceipts" class="tab-pane fade in">
+                            <br><br><br><br><br>
+                                            <form>
+                                                Search by Start Date: <input type="date" id="SearchDate">
+                                                <br><br>
+                                                Search by End Date: <input type="date" id="SearchDate1">
+                                                <br><br><br><br>
+                                                Search by Type:
+                                                <select type="type" id="SearchType">
+                                                    <option>All Receipts</option>
+                                                    <option>Groceries</option>
+                                                    <option>Child needs</option>
+                                                    <option>Miscellaneous</option>
+                                                </select>
+                                                <br><br><br><br>
+                                                <button type="button" class="btn btn-success ManageReceipts">Search for Receipts</button>
+                                                <br><br>
+                                            </form>
+                        </div><!--end manage receipts content-->
+                        </div>
+                    </div><!--end tab-content-->
+                </div><!--end column-->
+            </div><!--end row-->
+            <div class="row center-block">
+                <div class="col-xs-12">
+                    <a href="{{pathFor 'admin-dash'}}" class="btn btn-primary" role="button">Back</a>
+                    <br><br>
+                </div>
+            </div>
+        
+    </template>
+    
+    

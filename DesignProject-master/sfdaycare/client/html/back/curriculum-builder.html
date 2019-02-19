@@ -1,0 +1,66 @@
+<template name="curriculumBuilder">
+    <br><br>
+    <div class="row">
+        <div class="col-xs-1 center-block">
+            <a href="/admin-dash" class="btn btn-primary" role="button">Back</a>
+        </div>
+        <div class="col-xs-10"></div>
+        <div class="col-xs-1">
+            <a href="/curriculum-builder-help" target="_blank"><button class="btn btn-primary">Help</button></a>
+        </div>
+    </div>
+    <center><h1>Curriculum Builder</h1></center>
+<br>
+<div class="container">
+
+    <div class="row center-block" style="height:500px">
+       <div class="col-xs-2"></div>
+       <div class="col-xs-8">
+            <ul class="nav nav-tabs nav-justified">
+                    <li class="active"><a data-toggle="tab" href="#createCurriculum">Create</a></li>
+                    <li><a data-toggle="tab" href="#curriculumList">Curriculum List</a></li>
+            </ul>
+
+            <div class="tab-content">
+                    <div id="createCurriculum" class="tab-pane fade in active">
+
+                            <h3>Create a curriculum</h3>
+                            <form class="saveCurric"><br>
+                                <label for="curriculumName">Title: </label>
+                                <input type="text" name="curriculumName" pattern="[\w\-\s]{3,25}" required>
+                                <a href="#">
+                                        <span class="glyphicon glyphicon-info-sign" title="Alphanumeric characters and spaces only | 3 character minimum, 25 character maximum"></span> 
+                                    </a> <br><br>
+                                 <label>Date: </label><input type="date" name="dateCurriculumCreated" required><br><br>    
+                                <label for="curriculumContent">Curriculum Notes:</label><br>
+                               
+                                <textarea rows="13" cols="100" name="curriculumContent" placeholder="Enter Content here" required></textarea> 
+                                <br><br>
+                                <input type="submit" class="saveCurric btn btn-success " value="Save">       
+                            </form>
+                    </div>
+                    <div id="curriculumList" class="tab-pane fade">
+                        <h3>Curriculum List</h3>
+                        <br><br><br>
+                        <div class="curriculumListBackgroundColor" >
+                         {{#each displayAllCurriculum}}
+                       <label>Curriculum Title: </label><br><input type="text" value="{{curriculumName}}" readonly><br>
+                      <label>Date Created: </label><br><input type="text" value="{{curriculumDate}}" readonly><br><br>
+                      <a href="/edit-curriculum"><button class="btn btn-success editCurriculum">View/Edit</button></a>
+                      <button class="btn btn-danger deleteBtn ">delete</button><br><br>
+                      <hr>
+                        {{else}}
+                       <h3>No Records To Display</h3>
+                        {{/each}}
+                    </div>
+                    </div>
+            </div>
+        </div>
+        <div class="col-xs-2"></div>
+    </div>
+</div><!--end container-->
+
+    
+</template>
+
+			
